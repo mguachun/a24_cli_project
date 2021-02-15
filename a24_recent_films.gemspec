@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/upcoming_films/version"
+require_relative "lib/a24_recent_films/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "upcoming_films"

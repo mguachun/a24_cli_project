@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require_relative "../config/environment.rb"
+
+cli_obj = CLI.new 
+cli_obj.begin
