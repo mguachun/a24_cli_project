@@ -24,13 +24,11 @@ class Films
 
   def find_and_show_film_obj(integer)
     index = integer - 1
-    obj = Films.list_movie_titles[index - 1]
+    obj = moviecard.list_movie_titles[index - 1]
     puts "Title:" = moviecard.css("figcaption h3").text
     puts "Date Release:" = moviecard.css("figcaption h6")
     puts "Image:" = moviecard.css("img")[0]['src']
   end
-
-  #ADD LOOP
 
 
 end
