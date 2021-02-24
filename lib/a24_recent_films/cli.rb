@@ -1,13 +1,13 @@
 class CLI
 
     def self.begin
-        #puts scraper list
+        Scraper.get_page 
         howdy_user 
     end
 
     def self.howdy_user 
-        puts "Welcome! Herer are the recent movies from A24 Studios!"
-        #put class method of list
+        puts "Howdy! Here are the recent movies from A24 Studios!"
+        Films.list_films
 
         num = self.ask_for_input
 
@@ -17,7 +17,7 @@ class CLI
     def self.ask_for_input
         puts '\n'
         puts "Please select a number from the list"
-        #gets.chomp.to_i
+        gets.chomp.to_i
     end
 
     def sub_options
@@ -29,4 +29,5 @@ class CLI
         puts "Thanks for stopping by!"
    end
 
+   #add loop
 end
