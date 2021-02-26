@@ -7,7 +7,9 @@ class CLI
     end
 
     def howdy_user 
+        puts ' '
         puts "Howdy! Here are the recent movies from A24 Studios!"
+        puts ' '
         Films.list_films
 
         num = self.ask_for_input
@@ -16,7 +18,7 @@ class CLI
     end
 
     def ask_for_input
-        puts '\n'
+        puts ' '
         puts "Please select a number from the list:"
         gets.chomp.to_i
     end
