@@ -1,11 +1,12 @@
 class CLI
 
-    def self.begin
+    def begin
         Scraper.get_page 
         howdy_user 
+        menu
     end
 
-    def self.howdy_user 
+    def howdy_user 
         puts "Howdy! Here are the recent movies from A24 Studios!"
         Films.list_films
 
@@ -14,7 +15,7 @@ class CLI
         Films.find_and_show_movie_obj(num)
     end
 
-    def self.ask_for_input
+    def ask_for_input
         puts '\n'
         puts "Please select a number from the list:"
         gets.chomp.to_i
@@ -43,16 +44,11 @@ class CLI
    end
 
    #add loop
-   def Menu
-    list_films 
-    input = gets.strip.downcase
-
-    if input = if
-        puts " "
-
-    elsif input ! = "exit"
-        i = Integer(input , exception : false) #parse input to make exception in arg when n/f
-        if !i.nil?
+   def menu
+        list_films 
+        input = gets.strip.downcase
+        
+        if input.to_i
             puts i
             list_films(i-1) #prints num user inputs
             sub_options
@@ -60,8 +56,7 @@ class CLI
         else #arg if input is wrong
             puts "Whoops! Please try again!"
         end
-    end
-    self.ask_for_input
+        self.ask_for_input
    end
    
    def list_films(index)
