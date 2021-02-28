@@ -26,9 +26,9 @@ class Film
   def find_and_show_film_obj(integer)
     index = integer - 1
     obj = moviecard.list_movie_titles[index - 1]
-    # puts "Title:" = moviecard.css("figcaption h3").text
-    # puts "Release Date:" = moviecard.css("figcaption h6")
-    # puts "Image:" = moviecard.css("img")[0]['src']
+    # puts "Title:" = moviecard.css(film_obj.title)
+    # puts "Release Date:" = moviecard.css(film_obj.release)
+    # puts "Image:" = moviecard.css(film_obj.image)
   end
 
 

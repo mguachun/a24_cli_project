@@ -13,12 +13,13 @@ class CLI
         puts "Howdy! Here are the recent movies from A24 Studios!"
         puts "****************************************************"
         puts ' '
-        binding.pry
+    
         Film.list_film
 
         num = self.ask_for_input
 
         Film.find_and_show_movie_obj(num)
+
     end
 
     #while loop
@@ -39,12 +40,12 @@ class CLI
     
     #user chooses number and give back image and date released
     def print_movie_info
-    
 
-    
-        # puts "Date Released: #{film.date}"
-        # puts "Movie Image: #{film.image}"
+        puts "Date Released: #{film_obj.release}"
+        puts "Movie Image: #{film_obj.image}"
         puts "Title: #{film_obj.title}"
+
+        sub_options
     end
 
     def exit_film
@@ -55,6 +56,7 @@ class CLI
     def sub_options
         puts "Press (e) to Exit"
         puts "Press (r) to return to Main Menu"
+        input = gets.strip.downcase
 
         if answer == "r"
             puts "Back to Main Menu"
@@ -63,6 +65,7 @@ class CLI
     
         elsif answer == "e"
             exit_film
+            puts "Thanks for stopping by!"
         else
             puts " "
             puts "Oops! Please try again!"
