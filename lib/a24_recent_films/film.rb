@@ -22,13 +22,15 @@ class Film
   def self.find_by_title(selected_title)
     self.all.find {|obj| obj.title == selected_title}
   end
-
-  def find_and_show_film_obj(integer)
+#change name of method 
+  def self.find_and_show_film_obj(integer)
     index = integer - 1
-    obj = moviecard.list_movie_titles[index - 1]
-    # puts "Title:" = moviecard.css(film_obj.title)
-    # puts "Release Date:" = moviecard.css(film_obj.release)
-    # puts "Image:" = #{moviecard.css(film_obj.image)}
+    obj = Scraper.get_page[index]
+     puts "Title:#{obj.children[1].values[1]}"
+     binding.pry
+
+     puts "Release Date: #{film_obj.release}"
+    # puts "Image: #{film_obj.image}"
   end
 
 
