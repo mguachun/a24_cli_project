@@ -20,3 +20,4 @@ class Scraper
 
 end 
 
+#info shown through the objs
