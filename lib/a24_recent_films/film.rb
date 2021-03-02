@@ -23,12 +23,26 @@ class Film
     self.all.find {|obj| obj.title == selected_title}
   end
 
-  def find_and_show_film_obj(integer)
+  def self.print_movie_info(integer)
     index = integer - 1
-    obj = moviecard.list_movie_titles[index - 1]
-    # puts "Title:" = moviecard.css(film_obj.title)
-    # puts "Release Date:" = moviecard.css(film_obj.release)
-    # puts "Image:" = moviecard.css(film_obj.image)
+    obj = @@all[index]
+    #^ accesses instances to get data from 
+    #scraper data instead of Scraper.get_page[index]
+    #allows access to Film instances stored in @@all
+    
+    puts "Title: #{obj.title}"
+    puts ' '
+    puts "Image: #{obj.image}"
+    puts ''
+    puts "Release Date: #{obj.release.text}"
+    puts ' '
+
+    #puts Title:#{obj.children[1].values[1]}"
+    #  puts " "
+    #  puts "Release Date: #{obj.children[1].elements.text}"
+    #  puts " "
+    #  puts "Image : #{obj.css(".thumbnail")[0]["src"]}"
+   
   end
 
 
