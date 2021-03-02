@@ -5,3 +5,4 @@ require_relative "../config/environment.rb"
 
 cli_obj = CLI.new 
 cli_obj.begin
+#invoing method to start instance of the CLI class
