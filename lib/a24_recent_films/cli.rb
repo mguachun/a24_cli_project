@@ -15,12 +15,12 @@ class CLI
     
         Film.list_film 
 
-
         num = self.ask_for_input
 
         puts ' '
 
         Film.print_movie_info(num)
+
         sub_options
 
     end
@@ -48,8 +48,8 @@ class CLI
     end
 
     def sub_options
-        puts "Press (e) to Exit"
-        puts "Press (r) to return to Main Menu"
+        puts "Press 'e' to Exit"
+        puts "Press 'r' to return to Main Menu"
         input = gets.strip.downcase
 
         if answer == "r"

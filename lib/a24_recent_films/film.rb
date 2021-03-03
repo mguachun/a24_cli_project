@@ -37,7 +37,7 @@ class Film
     puts "Release Date: #{obj.release.text}"
     puts ' '
 
-    #puts Title:#{obj.children[1].values[1]}"
+    #  puts Title:#{obj.children[1].values[1]}"
     #  puts " "
     #  puts "Release Date: #{obj.children[1].elements.text}"
     #  puts " "
