@@ -3,8 +3,7 @@ class CLI
     def begin
         Scraper.get_page 
         howdy_user 
-        
-
+    
     end
 
     def howdy_user 
@@ -14,25 +13,17 @@ class CLI
         puts "****************************************************"
         puts ' '
     
-        Film.list_film
+        Film.list_film 
+
 
         num = self.ask_for_input
 
         puts ' '
 
         Film.print_movie_info(num)
+        sub_options
 
     end
-
-    #while loop
-    # i = 0
-    # while i < 11 do
-    #     puts i 
-    #     i += 1
-    #     break if i == 12
-
-    # end
-
 
     def ask_for_input
         puts ' '
@@ -41,15 +32,19 @@ class CLI
     end
     
     #user chooses number and give back image and date released
-    def print_movie_info
+    def cli_loop
 
-        puts "Title: #{film_obj.title}"
-        puts ' '
-        puts "Image: #{film_obj.image}"
-        puts ' '
-        puts "Date Released: #{film_obj.release}"
-        
-        sub_options
+        loop do
+            puts "Do you want to do that again?"
+                puts "Press 'y' to continue:"
+                puts "Press 'n' to exit:"
+                answer = gets.chomp
+                if answer != 'Y'
+                    break
+                end
+            end
+            
+
     end
 
     def sub_options
@@ -75,15 +70,6 @@ class CLI
         puts "Thanks for stopping by!"
    end
 
-#   def list_films(index_of_titles)
-#             puts " "
-#             puts "#{Film.all[index_of_titles].title}"
-#             puts " "
-#             puts "#{Film.all[index_of_titles].release}"
-#             puts " "
-#             puts "#{Film.all[index_of_titles].image}"
-#            end
-    
 end
 
 
