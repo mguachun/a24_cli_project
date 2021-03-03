@@ -1,8 +1,7 @@
 # UpcomingFilms
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/upcoming_films`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the recent A24 films gem! This gem allows the user to view information on the recent films from A24 films.
+ <!-- Put your Ruby code in the file `lib/upcoming_films`. To experiment with that code, run `bin/console` for an interactive prompt. -->
 
 ## Installation
 
@@ -22,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Access the nine most recent films collection from A24 Studios website!
 
 ## Development
 
@@ -32,4 +31,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/upcoming_films.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mguachun/a24_cli_project.gitupcoming_films.

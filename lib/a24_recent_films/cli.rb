@@ -3,7 +3,6 @@ class CLI
     def begin
         Scraper.get_page 
         howdy_user 
-    
     end
 
     def howdy_user 
@@ -22,6 +21,7 @@ class CLI
         Film.print_movie_info(num)
 
         sub_options
+        
 
     end
 
@@ -30,8 +30,8 @@ class CLI
         puts "Please select a number from the list:"
         input = gets.chomp.to_i
     end
-    
-    #user chooses number and give back image and date released
+    #^user chooses number and give back image and date released
+
     def cli_loop
 
         loop do
@@ -39,7 +39,7 @@ class CLI
                 puts "Press 'y' to continue:"
                 puts "Press 'n' to exit:"
                 answer = gets.chomp
-                if answer != 'Y'
+                if answer != 'y'
                     break
                 end
             end
@@ -47,28 +47,31 @@ class CLI
 
     end
 
+
+    def exit_film
+        puts "Thanks for stopping by!"
+        #exit
+   end
+
     def sub_options
-        puts "Press 'e' to Exit"
-        puts "Press 'r' to return to Main Menu"
+        puts "Would you like to see the list again? [y/n]"
         input = gets.strip.downcase
 
-        if answer == "r"
-            puts "Back to Main Menu"
+        if answer == "y"
+            puts "Back to the recent A24 films list! "
             puts " "
-            self.begin
-        elsif answer == "e"
+            howdy_user
+
+        elsif answer == "n" || answer == "exit"
             exit_film
             puts "Thanks for stopping by!"
+
         else
             puts " "
             puts "Oops! Please try again!"
             puts " "
         end      
     end
-
-    def exit_film
-        puts "Thanks for stopping by!"
-   end
 
 end
 
