@@ -14,57 +14,55 @@ class CLI
     
         Film.list_film 
 
-        num = self.ask_for_input
+        # num = self.ask_for_input
+        self.ask_for_input
 
         puts ' '
 
-        Film.print_movie_info(num)
+        # Film.print_movie_info(num)
 
-        sub_options
-        
+        # sub_options
 
     end
+
 
     def ask_for_input
         puts ' '
         puts "Please select a number from the list:"
         input = gets.chomp.to_i
+     
+
+            if input >= 1 && input <= 9
+               Film.print_movie_info(input)
+               sub_options
+            else 
+                puts "Error, please try again!"
+                ask_for_input
+                
+
+               
+            end 
     end
     #^user chooses number and give back image and date released
 
-    def cli_loop
-
-        loop do
-            puts "Do you want to do that again?"
-                puts "Press 'y' to continue:"
-                puts "Press 'n' to exit:"
-                answer = gets.chomp
-                if answer != 'y'
-                    break
-                end
-            end
-            
-
-    end
-
-
     def exit_film
-        puts "Thanks for stopping by!"
-        #exit
+        puts "Come back soon to see the most recent films from A24 Studios!"    
    end
 
     def sub_options
         puts "Would you like to see the list again? [y/n]"
         input = gets.strip.downcase
 
-        if answer == "y"
-            puts "Back to the recent A24 films list! "
+        if input == "y"
+            puts "Back to the recent A24 films list!"
             puts " "
             howdy_user
 
-        elsif answer == "n" || answer == "exit"
+        elsif input == "n" || input == "exit"
             exit_film
+            puts " "
             puts "Thanks for stopping by!"
+            puts " "
 
         else
             puts " "
@@ -72,7 +70,6 @@ class CLI
             puts " "
         end      
     end
-
 end
 
 

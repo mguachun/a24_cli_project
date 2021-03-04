@@ -24,7 +24,7 @@ class Film
   end
 
   def self.print_movie_info(integer)
-    index = integer - 1
+    index = (integer - 1)
     obj = @@all[index]
     #^ accesses instances to get data from 
     #scraper data instead of Scraper.get_page[index]
@@ -36,12 +36,6 @@ class Film
     puts ''
     puts "Release Date: #{obj.release.text}"
     puts ' '
-
-    #  puts Title:#{obj.children[1].values[1]}"
-    #  puts " "
-    #  puts "Release Date: #{obj.children[1].elements.text}"
-    #  puts " "
-    #  puts "Image : #{obj.css(".thumbnail")[0]["src"]}"
    
   end
 

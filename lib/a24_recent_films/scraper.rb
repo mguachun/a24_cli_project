@@ -1,9 +1,4 @@
 
-#   require 'pry'
-#   require 'nokogiri'
-#   require 'open-uri'
-# #require_relative 'a24_recent_films/a24_recent_films.rb'
-# #require_relative 'a24_recent_films/cli.rb'
 
 class Scraper
     def self.get_page
