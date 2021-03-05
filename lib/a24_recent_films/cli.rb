@@ -13,15 +13,10 @@ class CLI
         puts ' '
     
         Film.list_film 
-
-        # num = self.ask_for_input
+        
         self.ask_for_input
 
         puts ' '
-
-        # Film.print_movie_info(num)
-
-        # sub_options
 
     end
 
@@ -39,11 +34,8 @@ class CLI
                 puts "Error, please try again!"
                 ask_for_input
                 
-
-               
             end 
     end
-    #^user chooses number and give back image and date released
 
     def exit_film
         puts "Come back soon to see the most recent films from A24 Studios!"    
@@ -54,7 +46,6 @@ class CLI
         input = gets.strip.downcase
 
         if input == "y"
-            puts "Back to the recent A24 films list!"
             puts " "
             howdy_user
 
@@ -68,9 +59,12 @@ class CLI
             puts " "
             puts "Oops! Please try again!"
             puts " "
+            howdy_user
         end      
     end
 end
+
+
 
 
 
