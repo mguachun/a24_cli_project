@@ -39,8 +39,6 @@ class CLI
                 puts "Error, please try again!"
                 ask_for_input
                 
-
-               
             end 
     end
     #^user chooses number and give back image and date released
@@ -54,9 +52,10 @@ class CLI
         input = gets.strip.downcase
 
         if input == "y"
-            puts "Back to the recent A24 films list!"
             puts " "
             howdy_user
+        
+
 
         elsif input == "n" || input == "exit"
             exit_film
@@ -68,6 +67,7 @@ class CLI
             puts " "
             puts "Oops! Please try again!"
             puts " "
+            howdy_user
         end      
     end
 end
