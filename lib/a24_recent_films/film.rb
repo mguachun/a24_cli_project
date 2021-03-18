@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
 #require_relative "film/version"
-
+#I'm dealing with Film objs not title objs
 class Film
   @@all = []
-  attr_accessor :title, :release, :image
-  
+  attr_accessor :title, :release, :image, :producer, :starring
+
   def initialize(title)
     @title = title
-    @@all << self
+    @@all << self #save
+    #self.class.all
   end
 
   def self.all
@@ -17,7 +18,7 @@ class Film
 
   def self.list_film
     @@all.each.with_index(1) {|obj, index| puts "#{index}. #{obj.title}"}
-  end
+  end 
 
   def self.find_by_title(selected_title)
     self.all.find {|obj| obj.title == selected_title}
@@ -29,18 +30,22 @@ class Film
     #^ accesses instances to get data from 
     #scraper data instead of Scraper.get_page[index]
     #allows access to Film instances stored in @@all
-    
+  
     puts "Title: #{obj.title}"
     puts ' '
     puts "Image: #{obj.image}"
     puts ''
-    puts "Release Date: #{obj.release.text}"
+    puts "Release Date: #{obj.release}"
     puts ' '
+    puts "Producer: #{obj.producer}"
+    puts ' '
+    puts "Starring: #{obj.starring}"
    
   end
 
 
 end
+
 
 
 

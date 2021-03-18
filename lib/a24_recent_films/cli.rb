@@ -3,37 +3,38 @@ class CLI
     def begin
         Scraper.get_page 
         howdy_user 
-    end
+    end 
 
     def howdy_user 
+        sleep (2)
         puts ' '
         puts "****************************************************"
         puts "Howdy! Here are the recent movies from A24 Studios!"
         puts "****************************************************"
+        sleep (3)
         puts ' '
     
         Film.list_film 
 
-        # num = self.ask_for_input
-        self.ask_for_input
+        sleep (2)
+
+       
+        self.ask_for_input   #instance of the class
 
         puts ' '
 
-        # Film.print_movie_info(num)
-
-        # sub_options
-
     end
-
 
     def ask_for_input
         puts ' '
         puts "Please select a number from the list:"
         input = gets.chomp.to_i
+
      
 
             if input >= 1 && input <= 9
-               Film.print_movie_info(input)
+             Film.print_movie_info(input) 
+           
                sub_options
             else 
                 puts "Error, please try again!"
@@ -55,8 +56,6 @@ class CLI
             puts " "
             howdy_user
         
-
-
         elsif input == "n" || input == "exit"
             exit_film
             puts " "
